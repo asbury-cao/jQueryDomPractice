@@ -26,13 +26,20 @@ let $colorSelectors = $(".form-control");
 
 //there is no distinction other than its innertext
 
-$colorSelectors.on("change", ".form-control", function () {
+$colorSelectors.on("change", function () {
   // let red = Number($colorSelectors[0].value).toString(16);
   // let green = Number($colorSelectors[2].value).toString(16);
   // let blue = Number($colorSelectors[1].value).toString(16);
   //set background color of body to the combination of RBG
   //did we want to use container or body for the selector?
   // $("body").css("background-color", `#${red}${green}${blue})`)
-  $("body").css("background-color") = `rgb(${$colorSelectors[0].value},${$colorSelectors[2].value},${$colorSelectors[1].value})`
+  $("body").css("background-color",
+    `rgb(${$colorSelectors[0].value},
+         ${$colorSelectors[2].value},
+         ${$colorSelectors[1].value})`);
 });
 
+
+$pupImage.on('click', function () {
+  $pupImage.remove();
+});
